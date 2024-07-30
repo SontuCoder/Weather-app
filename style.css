@@ -29,6 +29,44 @@ header {
     background-image: linear-gradient(skyblue, rgb(86, 86, 251));
 }
 
+#search{
+    height: 75px;
+    width: 1100px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    
+}
+
+input{
+    height: 100%;
+    width: 80%;
+    border-radius: 20px;
+    font-size: 30px;
+    padding-left: 10px;
+    font-weight: 700;
+}
+#enter{
+    height: 100%;
+    width: 15%;
+    border-radius: 20px;
+    width: 100px;
+    margin-left: 10px;
+}
+#enter:hover{
+    transform: scale(1.1);
+}
+#enter:active{
+    transform: scale(0.9);
+}
+
+#enter>img{
+    width: 75px;
+}
+
 .nunito-sans {
     font-family: "Nunito Sans", sans-serif;
     font-optical-sizing: auto;
@@ -99,6 +137,9 @@ margin-right: 10px;
     height: 780px;
     display: flex;
     flex-direction: column;
+}
+.temp,#lowermain_temp{
+    display: flex;
 }
 
 .inMain {
@@ -175,7 +216,7 @@ margin-right: 10px;
         padding: 0px 100px;
     }
 
-    header {
+    header,#search {
         width: 90vw;
     }
 

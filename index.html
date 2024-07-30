@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,9 +20,15 @@
         <p id="heading" class="nunito-sans  "> Weather</p>
         <img class="sun" src="./image/images__2_-removebg-preview.png" alt="">
     </header>
+
+    <div id="search">
+        <Input type="text" placeholder="Enter City Name..."></Input>
+        <button id="enter"><img src="image/icons8-search-128.png"alt=""></button>
+    </div>
+
     <div class="fullbody">
         <aside class="left side">
-            <div class="mini"id="pre_mini1">
+            <div class="mini" id="pre_mini1">
                 <div class="mini_detail">
                     <p>Friday, 12/03/24</p>
                     <p>Partly Cloudy</p>
@@ -35,7 +41,6 @@
                     <div class="mini_temp">22<sup style="font-size: 50%;">o</sup>C</div>
                 </div>
             </div>
-
             <div class="mini">
                 <div class="mini_detail">
                     <p>Friday, 12/03/24</p>
@@ -63,15 +68,18 @@
                 </div>
             </div>
         </aside>
+
+        <!-- Main  -->
         <main class="main">
             <div class="inMain" id="main_upper">
                 <img class="main_img"
                     src="./image/pngtree-boy-sits-on-a-hill-in-front-of-a-crescent-moon-picture-image_3150329.jpg"
                     alt="">
                 <div class="now_temp weather">
-                    <div class="temp">22<sup style="font-size: 50%;">o</sup>C</div>
+                    <div class="temp">
+                        <p id="nowTemp"></p><sup style="font-size: 50%;">o</sup>C</div>
                     <div class="details">
-                        <p>Friday, 11:00 pm</p>
+                        <p>Friday, 11:00pm</p>
                         <p>Partly Cloudy</p>
                     </div>
                 </div>
@@ -87,10 +95,13 @@
                 <div id="lowermain_right">
                     <div id="lowermain_riup"><img id="lowermain_png" src="./image/images-removebg-preview.png" alt="">
                     </div>
-                    <div id="lowermain_temp">22<sup style="font-size: 50%;">o</sup>C</div>
+                    <div id="lowermain_temp">
+                        <p id="Temp"></p><sup style="font-size: 50%;">o</sup>C</div>
                 </div>
             </div>
         </main>
+
+
         <aside class="right side">
             <div class="mini">
                 <div class="mini_detail">
@@ -133,6 +144,7 @@
             </div>
         </aside>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
