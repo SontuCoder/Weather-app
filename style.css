@@ -184,6 +184,9 @@ margin-right: 10px;
     font-size: 25px;
     width: 35%;
 }
+em{
+    font-style: normal;
+}
 
 #main_lower {
     height: 430px;
