@@ -162,7 +162,7 @@ margin-right: 10px;
     width: 95%;
     color: #FFFFDD;
     position: relative;
-    top: -120px;
+    top: -130px;
     padding: 10px;
     display: flex;
     flex-direction: row;
@@ -182,7 +182,7 @@ margin-right: 10px;
 .details{
     margin-top: 20px;
     font-size: 25px;
-    width: 35%;
+    width: 40%;
 }
 em{
     font-style: normal;

@@ -1,1 +1,3 @@
 # Weather-app
+
+This weather application is a responsive web app providing current weather details for multiple cities. The search section allows users to input a city name and retrieve weather data. The main body includes a detailed weather display for the searched city and mini weather summaries for predefined cities like Delhi, Kolkata, Mumbai, Hyderabad, Bangalore, and Chennai. Each city’s weather card shows temperature, humidity, wind speed, and conditions. The application fetches data using the OpenWeatherMap API and dynamically updates the weather information using JavaScript.
