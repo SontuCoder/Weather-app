@@ -38,17 +38,17 @@ header {
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
-    
 }
 
 input{
     height: 100%;
-    width: 80%;
+    width: 100%;
     border-radius: 20px;
     font-size: 30px;
     padding-left: 10px;
     font-weight: 700;
 }
+
 #enter{
     height: 100%;
     width: 15%;

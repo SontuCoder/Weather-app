@@ -17,13 +17,9 @@ const d = new Date();
 let day = days[ d.getDay() ];
 document.querySelector("#weakDay").innerHTML=day;
 
-function enter(){
-    
-}
-
 // Searching Location Weather:-
-const apiurl="http://api.openweathermap.org/data/2.5/weather?q=Agra&units=metric";
-async function checkWeather(){
+async function checkWeather(city){
+    apiurl=`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric`;
     const responce =  await fetch(apiurl + `&appid=${apikey}`);
     let data = await responce.json();
     document.querySelector("#nowTemp").innerHTML=data.main.temp.toFixed(0);
@@ -74,7 +70,6 @@ async function checkWeather_Mumbai(){
     document.querySelector("#mumbai_weather").innerHTML=data_mumbai.weather[0].main;
 }
 
-
 //Weather in Hyderabad:-
 const apiurl_Hyderabad="http://api.openweathermap.org/data/2.5/weather?q=Hyderabad&units=metric";
 async function checkWeather_Hyderabad(){
@@ -112,10 +107,17 @@ async function checkWeather_Chennai(){
     document.querySelector("#chennai_weather").innerHTML=data_chennai.weather[0].main;
 }
 
-checkWeather()
+checkWeather("Agra")
 checkWeather_Delhi()
 checkWeather_Kolkata()
 checkWeather_Mumbai()
 checkWeather_Hyderabad()
 checkWeather_Bangalore()
 checkWeather_Chennai()
+function search(){
+    city=document.querySelector("#display").value;
+
+        checkWeather(city);
+        document.querySelector("#display").value="";
+}
+
