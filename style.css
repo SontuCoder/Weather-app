@@ -115,8 +115,8 @@ input{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 10px;
-    font-size: 20px;
+    margin: 0px 10px;
+        font-size: 20px;
     width: 50%;
 }
 .mini_img{
@@ -129,7 +129,6 @@ margin-right: 10px;
     font-size: 50px;
     position: relative;
     top: -30px;
-    left: 20px;
 }
 #mini_right{
     display: flex;
