@@ -1,16 +1,17 @@
 const apikey="5329c77fca38e8923f27bd1eabb6fda1"
 
-setInterval(()=>{
-    let d = new Date();
-    document.querySelector("#time").innerHTML = d.toLocaleTimeString();
-},1000)
-
 let c = new Date();
 let date = c.getDate();
 let month = c.getMonth() +1;
 let year = c.getFullYear();
 let fullYear = document.getElementById("current_date");
 fullYear.innerHTML = `${date}/${month}/${year}`;
+function updatetime(timezone){
+    let now = new Date();
+    let utcTime = now.getTime() + now.getTimezoneOffset() * 60000;
+    let localTime = new Date(utcTime + timezone * 1000);
+        document.querySelector("#time").innerHTML = localTime.toLocaleTimeString();
+}
 
 const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 const d = new Date();
@@ -22,6 +23,10 @@ async function checkWeather(city){
     apiurl=`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric`;
     const responce =  await fetch(apiurl + `&appid=${apikey}`);
     let data = await responce.json();
+    //fetch time
+    updatetime(data.timezone);
+    setInterval(()=>updatetime(data.timezone),1000);
+
     document.querySelector("#nowTemp").innerHTML=data.main.temp.toFixed(0);
     document.querySelector("#Temp").innerHTML=data.main.temp.toFixed(0);
     document.querySelector("#location").innerHTML=data.name;
@@ -43,6 +48,8 @@ async function checkWeather(city){
             b.src = "./image/cloudy-day.png";
         }else if(data.weather[0].main === "Haze"){
             b.src = "./image/day_haze.png";
+        }else if(data.weather[0].main === "Thunderstorm"){
+            b.src = "./image/thunderstorm_day.png";
         }else{
             b.src = "./image/sunny.png";
         }
@@ -57,6 +64,8 @@ async function checkWeather(city){
                 b.src = "./image/cloudy-night_6642952.png";
             }else if(data.weather[0].main === "Haze"){
                 b.src = "./image/night_haze.png";
+            }else if(data.weather[0].main === "Thunderstorm"){
+                b.src = "./image/thunderstorm_night.png";
             }else{
                 b.src = "./image/night.png";
             }
@@ -86,6 +95,8 @@ async function checkWeather_Delhi(){
             b.src = "./image/cloudy-day.png";
         }else if(data_delhi.weather[0].main === "Haze"){
             b.src = "./image/day_haze.png";
+        }else if(data_delhi.weather[0].main === "Thunderstorm"){
+            b.src = "./image/thunderstorm_day.png";
         }else{
             b.src = "./image/sunny.png";
         }
@@ -100,6 +111,8 @@ async function checkWeather_Delhi(){
                 b.src = "./image/cloudy-night_6642952.png";
             }else if(data_delhi.weather[0].main === "Haze"){
                 b.src = "./image/night_haze.png";
+            }else if(data_delhi.weather[0].main === "Thunderstorm"){
+                b.src = "./image/thunderstorm_night.png";
             }else{
                 b.src = "./image/night.png";
             }
@@ -130,6 +143,8 @@ async function checkWeather_Kolkata(){
             b.src = "./image/cloudy-day.png";
         }else if(data_kolkata.weather[0].main === "Haze"){
             b.src = "./image/day_haze.png";
+        }else if(data_kolkata.weather[0].main === "Thunderstorm"){
+            b.src = "./image/thunderstorm_day.png";
         }else{
             b.src = "./image/sunny.png";
         }
@@ -144,6 +159,8 @@ async function checkWeather_Kolkata(){
                 b.src = "./image/cloudy-night_6642952.png";
             }else if(data_kolkata.weather[0].main === "Haze"){
                 b.src = "./image/night_haze.png";
+            }else if(data_kolkata.weather[0].main === "Thunderstorm"){
+                b.src = "./image/thunderstorm_night.png";
             }else{
                 b.src = "./image/night.png";
             }
@@ -174,6 +191,8 @@ async function checkWeather_Mumbai(){
             b.src = "./image/cloudy-day.png";
         }else if(data_mumbai.weather[0].main === "Haze"){
             b.src = "./image/day_haze.png";
+        }else if(data_mumbai.weather[0].main === "Thunderstorm"){
+            b.src = "./image/thunderstorm_day.png";
         }else{
             b.src = "./image/sunny.png";
         }
@@ -188,6 +207,8 @@ async function checkWeather_Mumbai(){
                 b.src = "./image/cloudy-night_6642952.png";
             }else if(data_mumbai.weather[0].main === "Haze"){
                 b.src = "./image/night_haze.png";
+            }else if(data_mumbai.weather[0].main === "Thunderstorm"){
+                b.src = "./image/thunderstorm_night.png";
             }else{
                 b.src = "./image/night.png";
             }
@@ -218,6 +239,8 @@ async function checkWeather_Hyderabad(){
             b.src = "./image/cloudy-day.png";
         }else if(data_hyderabad.weather[0].main === "Haze"){
             b.src = "./image/day_haze.png";
+        }else if(data_hyderabad.weather[0].main === "Thunderstorm"){
+            b.src = "./image/thunderstorm_day.png";
         }else{
             b.src = "./image/sunny.png";
         }
@@ -232,6 +255,8 @@ async function checkWeather_Hyderabad(){
                 b.src = "./image/cloudy-night_6642952.png";
             }else if(data_hyderabad.weather[0].main === "Haze"){
                 b.src = "./image/night_haze.png";
+            }else if(data_hyderabad.weather[0].main === "Thunderstorm"){
+                b.src = "./image/thunderstorm_night.png";
             }else{
                 b.src = "./image/night.png";
             }
@@ -261,6 +286,8 @@ async function checkWeather_Bangalore(){
             b.src = "./image/cloudy-day.png";
         }else if(data_bangalore.weather[0].main === "Haze"){
             b.src = "./image/day_haze.png";
+        }else if(data_bangalore.weather[0].main === "Thunderstorm"){
+            b.src = "./image/thunderstorm_day.png";
         }else{
             b.src = "./image/sunny.png";
         }
@@ -275,6 +302,8 @@ async function checkWeather_Bangalore(){
                 b.src = "./image/cloudy-night_6642952.png";
             }else if(data_bangalore.weather[0].main === "Haze"){
                 b.src = "./image/night_haze.png";
+            }else if(data_bangalore.weather[0].main === "Thunderstorm"){
+                b.src = "./image/thunderstorm_night.png";
             }else{
                 b.src = "./image/night.png";
             }
@@ -304,6 +333,8 @@ async function checkWeather_Chennai(){
             b.src = "./image/cloudy-day.png";
         }else if(data_chennai.weather[0].main === "Haze"){
             b.src = "./image/day_haze.png";
+        }else if(data_chennai.weather[0].main === "Thunderstorm"){
+            b.src = "./image/thunderstorm_day.png";
         }else{
             b.src = "./image/sunny.png";
         }
@@ -318,6 +349,8 @@ async function checkWeather_Chennai(){
                 b.src = "./image/cloudy-night_6642952.png";
             }else if(data_chennai.weather[0].main === "Haze"){
                 b.src = "./image/night_haze.png";
+            }else if(data_chennai.weather[0].main === "Thunderstorm"){
+                b.src = "./image/thunderstorm_night.png";
             }else{
                 b.src = "./image/night.png";
             }
