@@ -30,6 +30,37 @@ async function checkWeather(city){
     document.querySelector("#feels").innerHTML=data.main.feels_like.toFixed(0);
     document.querySelector("#weather_main").innerHTML=data.weather[0].main;
 
+    let b = document.querySelector("#lowermain_png")
+    let d = new Date();
+    let a = d.getHours();
+    // in day
+    if(a>=6 && a<=18){
+        if(data.weather[0].main==="Mist"){
+        b.src="./image/Mist_day.png";
+        } else if (data.weather[0].main === "Rain") {
+            b.src = "./image/Rain.png";
+        } else if (data.weather[0].main === "Clouds") {
+            b.src = "./image/cloudy-day.png";
+        }else if(data.weather[0].main === "Haze"){
+            b.src = "./image/day_haze.png";
+        }else{
+            b.src = "./image/sunny.png";
+        }
+    }
+    //in night
+    else{
+        if(data.weather[0].main==="Mist"){
+            b.src="./image/Mist_night.png";
+            } else if (data.weather[0].main === "Rain") {
+                b.src = "./image/Rain.png";
+            } else if (data.weather[0].main === "Clouds") {
+                b.src = "./image/cloudy-night_6642952.png";
+            }else if(data.weather[0].main === "Haze"){
+                b.src = "./image/night_haze.png";
+            }else{
+                b.src = "./image/night.png";
+            }
+    }
 }
 
 // Weather in Delhi:-
@@ -42,6 +73,37 @@ async function checkWeather_Delhi(){
     document.querySelector("#delhi_humidity").innerHTML=data_delhi.main.humidity;
     document.querySelector("#delhi_windSpeed").innerHTML=data_delhi.wind.speed.toFixed(0);
     document.querySelector("#delhi_weather").innerHTML=data_delhi.weather[0].main;
+    let b = document.querySelector("#delhi_png")
+    let d = new Date();
+    let a = d.getHours();
+    // in day
+    if(a>=6 && a<=18){
+        if(data_delhi.weather[0].main==="Mist"){
+        b.src="./image/Mist_day.png";
+        } else if (data_delhi.weather[0].main === "Rain") {
+            b.src = "./image/Rain.png";
+        } else if (data_delhi.weather[0].main === "Clouds") {
+            b.src = "./image/cloudy-day.png";
+        }else if(data_delhi.weather[0].main === "Haze"){
+            b.src = "./image/day_haze.png";
+        }else{
+            b.src = "./image/sunny.png";
+        }
+    }
+    //in night
+    else{
+        if(data_delhi.weather[0].main==="Mist"){
+            b.src="./image/Mist_night.png";
+            } else if (data_delhi.weather[0].main === "Rain") {
+                b.src = "./image/Rain.png";
+            } else if (data_delhi.weather[0].main === "Clouds") {
+                b.src = "./image/cloudy-night_6642952.png";
+            }else if(data_delhi.weather[0].main === "Haze"){
+                b.src = "./image/night_haze.png";
+            }else{
+                b.src = "./image/night.png";
+            }
+    }
 }
 
 //Weather in Kolkata:-
@@ -55,6 +117,37 @@ async function checkWeather_Kolkata(){
     document.querySelector("#kolkata_humidity").innerHTML=data_kolkata.main.humidity;
     document.querySelector("#kolkata_windSpeed").innerHTML=data_kolkata.wind.speed.toFixed(0);
     document.querySelector("#kolkata_weather").innerHTML=data_kolkata.weather[0].main;
+    let b = document.querySelector("#kolkata_png")
+    let d = new Date();
+    let a = d.getHours();
+    // in day
+    if(a>=6 && a<=18){
+        if(data_kolkata.weather[0].main==="Mist"){
+        b.src="./image/Mist_day.png";
+        } else if (data_kolkata.weather[0].main === "Rain") {
+            b.src = "./image/Rain.png";
+        } else if (data_kolkata.weather[0].main === "Clouds") {
+            b.src = "./image/cloudy-day.png";
+        }else if(data_kolkata.weather[0].main === "Haze"){
+            b.src = "./image/day_haze.png";
+        }else{
+            b.src = "./image/sunny.png";
+        }
+    }
+    //in night
+    else{
+        if(data_kolkata.weather[0].main==="Mist"){
+            b.src="./image/Mist_night.png";
+            } else if (data_kolkata.weather[0].main === "Rain") {
+                b.src = "./image/Rain.png";
+            } else if (data_kolkata.weather[0].main === "Clouds") {
+                b.src = "./image/cloudy-night_6642952.png";
+            }else if(data_kolkata.weather[0].main === "Haze"){
+                b.src = "./image/night_haze.png";
+            }else{
+                b.src = "./image/night.png";
+            }
+    }
 }
 
 //Weather in Mumbai:-
@@ -68,6 +161,37 @@ async function checkWeather_Mumbai(){
     document.querySelector("#mumbai_humidity").innerHTML=data_mumbai.main.humidity;
     document.querySelector("#mumbai_windSpeed").innerHTML=data_mumbai.wind.speed.toFixed(0);
     document.querySelector("#mumbai_weather").innerHTML=data_mumbai.weather[0].main;
+    let b = document.querySelector("#mumbai_png")
+    let d = new Date();
+    let a = d.getHours();
+    // in day
+    if(a>=6 && a<=18){
+        if(data_mumbai.weather[0].main==="Mist"){
+        b.src="./image/Mist_day.png";
+        } else if (data_mumbai.weather[0].main === "Rain") {
+            b.src = "./image/Rain.png";
+        } else if (data_mumbai.weather[0].main === "Clouds") {
+            b.src = "./image/cloudy-day.png";
+        }else if(data_mumbai.weather[0].main === "Haze"){
+            b.src = "./image/day_haze.png";
+        }else{
+            b.src = "./image/sunny.png";
+        }
+    }
+    //in night
+    else{
+        if(data_mumbai.weather[0].main==="Mist"){
+            b.src="./image/Mist_night.png";
+            } else if (data_mumbai.weather[0].main === "Rain") {
+                b.src = "./image/Rain.png";
+            } else if (data_mumbai.weather[0].main === "Clouds") {
+                b.src = "./image/cloudy-night_6642952.png";
+            }else if(data_mumbai.weather[0].main === "Haze"){
+                b.src = "./image/night_haze.png";
+            }else{
+                b.src = "./image/night.png";
+            }
+    }
 }
 
 //Weather in Hyderabad:-
@@ -81,6 +205,37 @@ async function checkWeather_Hyderabad(){
     document.querySelector("#hyderabad_humidity").innerHTML=data_hyderabad.main.humidity;
     document.querySelector("#hyderabad_windSpeed").innerHTML=data_hyderabad.wind.speed.toFixed(0);
     document.querySelector("#hyderabad_weather").innerHTML=data_hyderabad.weather[0].main;
+    let b = document.querySelector("#hyderabad_png")
+    let d = new Date();
+    let a = d.getHours();
+    // in day
+    if(a>=6 && a<=18){
+        if(data_hyderabad.weather[0].main==="Mist"){
+        b.src="./image/Mist_day.png";
+        } else if (data_hyderabad.weather[0].main === "Rain") {
+            b.src = "./image/Rain.png";
+        } else if (data_hyderabad.weather[0].main === "Clouds") {
+            b.src = "./image/cloudy-day.png";
+        }else if(data_hyderabad.weather[0].main === "Haze"){
+            b.src = "./image/day_haze.png";
+        }else{
+            b.src = "./image/sunny.png";
+        }
+    }
+    //in night
+    else{
+        if(data_hyderabad.weather[0].main==="Mist"){
+            b.src="./image/Mist_night.png";
+            } else if (data_hyderabad.weather[0].main === "Rain") {
+                b.src = "./image/Rain.png";
+            } else if (data_hyderabad.weather[0].main === "Clouds") {
+                b.src = "./image/cloudy-night_6642952.png";
+            }else if(data_hyderabad.weather[0].main === "Haze"){
+                b.src = "./image/night_haze.png";
+            }else{
+                b.src = "./image/night.png";
+            }
+    }
 }
 //Weather in Bangalore:-
 const apiurl_Bangalore="http://api.openweathermap.org/data/2.5/weather?q=Bangalore&units=metric";
@@ -93,6 +248,37 @@ async function checkWeather_Bangalore(){
     document.querySelector("#bangalore_humidity").innerHTML=data_bangalore.main.humidity;
     document.querySelector("#bangalore_windSpeed").innerHTML=data_bangalore.wind.speed.toFixed(0);
     document.querySelector("#bangalore_weather").innerHTML=data_bangalore.weather[0].main;
+    let b = document.querySelector("#bangalore_png");
+    let d = new Date();
+    let a = d.getHours();
+    // in day
+    if(a>=6 && a<=18){
+        if(data_bangalore.weather[0].main==="Mist"){
+        b.src="./image/Mist_day.png";
+        } else if (data_bangalore.weather[0].main === "Rain") {
+            b.src = "./image/Rain.png";
+        } else if (data_bangalore.weather[0].main === "Clouds") {
+            b.src = "./image/cloudy-day.png";
+        }else if(data_bangalore.weather[0].main === "Haze"){
+            b.src = "./image/day_haze.png";
+        }else{
+            b.src = "./image/sunny.png";
+        }
+    }
+    //in night
+    else{
+        if(data_bangalore.weather[0].main==="Mist"){
+            b.src="./image/Mist_night.png";
+            } else if (data_bangalore.weather[0].main === "Rain") {
+                b.src = "./image/Rain.png";
+            } else if (data_bangalore.weather[0].main === "Clouds") {
+                b.src = "./image/cloudy-night_6642952.png";
+            }else if(data_bangalore.weather[0].main === "Haze"){
+                b.src = "./image/night_haze.png";
+            }else{
+                b.src = "./image/night.png";
+            }
+    }
 }
 
 //Weather in Chennai:-
@@ -105,6 +291,37 @@ async function checkWeather_Chennai(){
     document.querySelector("#chennai_humidity").innerHTML=data_chennai.main.humidity;
     document.querySelector("#chennai_windSpeed").innerHTML=data_chennai.wind.speed.toFixed(0);
     document.querySelector("#chennai_weather").innerHTML=data_chennai.weather[0].main;
+    let b = document.querySelector("#chennai_png")
+    let d = new Date();
+    let a = d.getHours();
+    // in day
+    if(a>=6 && a<=18){
+        if(data_chennai.weather[0].main==="Mist"){
+        b.src="./image/Mist_day.png";
+        } else if (data_chennai.weather[0].main === "Rain") {
+            b.src = "./image/Rain.png";
+        } else if (data_chennai.weather[0].main === "Clouds") {
+            b.src = "./image/cloudy-day.png";
+        }else if(data_chennai.weather[0].main === "Haze"){
+            b.src = "./image/day_haze.png";
+        }else{
+            b.src = "./image/sunny.png";
+        }
+    }
+    //in night
+    else{
+        if(data_chennai.weather[0].main==="Mist"){
+            b.src="./image/Mist_night.png";
+            } else if (data_chennai.weather[0].main === "Rain") {
+                b.src = "./image/Rain.png";
+            } else if (data_chennai.weather[0].main === "Clouds") {
+                b.src = "./image/cloudy-night_6642952.png";
+            }else if(data_chennai.weather[0].main === "Haze"){
+                b.src = "./image/night_haze.png";
+            }else{
+                b.src = "./image/night.png";
+            }
+    }
 }
 
 checkWeather("Agra")
@@ -116,7 +333,6 @@ checkWeather_Bangalore()
 checkWeather_Chennai()
 function search(){
     city=document.querySelector("#display").value;
-
         checkWeather(city);
         document.querySelector("#display").value="";
 }

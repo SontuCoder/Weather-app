@@ -123,13 +123,18 @@ input{
 margin-right: 10px;
 }
 .mini_png{
-    width: 90%;
+    width: 100px;
 }
 .mini_temp{
     font-size: 50px;
     position: relative;
     top: -30px;
-    left: 30px;
+    left: 20px;
+}
+#mini_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .main {
@@ -199,19 +204,25 @@ em{
     margin:20px 0px 30px 30px ;
     font-size: 20px;
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 #lowermain_right{
     margin-top: 50px;
     margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 #lowermain_png{
-    width: 200px;
+    width: 100px;
 }
 #lowermain_temp{
     font-size: 90px;
     position: relative;
-    top: -20px;
-    left: 40px;
+    top: -60px;
+    left: 10px;
 }
 
 @media(max-width:1200px) {
@@ -273,11 +284,12 @@ em{
         margin:20px 0px 30px 20px ;
     }
     #lowermain_png{
-        width: 150px;
+        width: 100px;
     }
     #lowermain_temp{
         font-size: 70px;
         left: 10px;
+        top:-30px
     }
     .mini_temp{
         margin-left: -10px;
@@ -334,6 +346,9 @@ em{
     #lowermain_left{
         margin-top:30px ;
     }
+    #lowermain_temp{
+        top: -10px;
+    }
 }
 
 @media(max-width:500px) {
@@ -380,9 +395,6 @@ em{
     #lowermain_right{
         margin-top: 0px;
         margin-left: 10px;
-    }
-    #lowermain_png{
-        width: 130px;
     }
     #lowermain_temp{
         font-size: 50px;
