@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Project README Template">
-    <title>Project README Template</title>
-    <style>
+
+<style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -41,13 +35,12 @@
     </style>
 </head>
 <body>
+ <h1>Project Title</h1>
 
-    <h1>Project Title</h1>
-
-    <h2>Description</h2>
+ <h2>Description</h2>
     <p>Briefly describe what the project does, its purpose, and key features.</p>
 
-    <h2>Table of Contents</h2>
+ <h2>Table of Contents</h2>
     <ul>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#usage">Usage</a></li>
@@ -58,7 +51,7 @@
         <li><a href="#contact">Contact</a></li>
     </ul>
 
-    <h2 id="installation">Installation</h2>
+  <h2 id="installation">Installation</h2>
     <ol>
         <li>Clone the repository:
             <pre><code>git clone https://github.com/your-repo/project.git</code></pre>
@@ -68,32 +61,31 @@
         </li>
     </ol>
 
-    <h2 id="usage">Usage</h2>
+ <h2 id="usage">Usage</h2>
     <p>Explain how to run or use the project, including commands or screenshots.</p>
 
-    <h2 id="features">Features</h2>
+ <h2 id="features">Features</h2>
     <ul>
         <li>Feature 1</li>
         <li>Feature 2</li>
     </ul>
 
-    <h2 id="technologies-used">Technologies Used</h2>
+  <h2 id="technologies-used">Technologies Used</h2>
     <ul>
         <li>Technology 1</li>
         <li>Technology 2</li>
     </ul>
 
-    <h2 id="contributing">Contributing</h2>
+  <h2 id="contributing">Contributing</h2>
     <p>Contributions are welcome! Please see <a href="CONTRIBUTING.md">CONTRIBUTING.md</a> for guidelines.</p>
 
-    <h2 id="license">License</h2>
+  <h2 id="license">License</h2>
     <p>This project is licensed under the MIT License. See <a href="LICENSE">LICENSE</a> for details.</p>
 
-    <h2 id="contact">Contact</h2>
+   <h2 id="contact">Contact</h2>
     <ul>
         <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
         <li>GitHub: <a href="https://github.com/YourUsername" target="_blank">YourUsername</a></li>
     </ul>
 
 </body>
-</html>
