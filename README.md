@@ -1,39 +1,4 @@
 
-<style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0 auto;
-            max-width: 900px;
-            padding: 20px;
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        code {
-            background-color: #f4f4f4;
-            padding: 2px 4px;
-            font-size: 1em;
-            border-radius: 4px;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        pre {
-            background: #f4f4f4;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
-    </style>
-</head>
 <body>
  <h1>Project Title</h1>
 
@@ -51,6 +16,7 @@
         <li><a href="#contact">Contact</a></li>
     </ul>
 
+<img src="./image/logo.jpg">
   <h2 id="installation">Installation</h2>
     <ol>
         <li>Clone the repository:
