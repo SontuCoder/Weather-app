@@ -16,7 +16,7 @@
         <li><a href="#contact">Contact</a></li>
     </ul>
 
-<img src="./image/logo.jpg">
+<img src="./image/logo.jpg" style="width: 100px; height:100px">
   <h2 id="installation">Installation</h2>
     <ol>
         <li>Clone the repository:
